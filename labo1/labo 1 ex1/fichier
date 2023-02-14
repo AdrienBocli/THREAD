@@ -1,0 +1,60 @@
+WWiki
+
+Article
+Discussion
+Lire
+Voir le texte source
+Voir l’historique
+Cette page est en semi-protection longue.
+Page d’aide sur l’homonymie	
+Cet article concerne les wikis en général. Pour l'accueil de l'encyclopédie, voir Wikipédia:Accueil principal. Pour l'article sur Wikipédia, voir Wikipédia.
+
+
+Exemple de lien pour modifier la page d'un wiki, ici la page « Wikipédia » sur Wikipédia en français.
+
+Ward Cunningham, inventeur du wiki.
+Un wiki est une application web qui permet la création, la modification et l'illustration collaboratives de pages à l'intérieur d'un site web. Il utilise un langage de balisage et son contenu est modifiable au moyen d’un navigateur web. C'est un logiciel de gestion de contenu, dont la structure implicite est minimale, tandis que la structure explicite se met en place progressivement en fonction des besoins des usagers.
+
+Le premier wiki, créé en 1995 par Ward Cunningham pour réaliser la section d’un site sur la programmation informatique, fut appelé WikiWikiWeb. En 2021, selon Alexa Internet, le site géré par wiki le plus consulté est Wikipédia1.
+
+Définition du terme « wiki »
+
+Signalisation Wiki Wiki à l'aéroport international d'Honolulu.
+Le mot hawaïen wikiwiki signifie en français « rapide »2, « vite »3 ou « informel »4. Il a été choisi par Ward Cunningham lorsqu'il créa le premier wiki, qu'il appela WikiWikiWeb5. Il utilisa l'expression « wiki wiki », un redoublement qui signifie « très rapide », « très vite »6, parce que c'est le premier terme hawaïen qu'il apprit lorsqu'il dut prendre un bus à la sortie de l'aéroport5, et qu'au moment de créer son site, il voulait un terme amusant pour dire rapide. Dans l'URL du site apparaissait uniquement le terme « wiki », ce qui a probablement poussé les visiteurs à l'appeler ainsi6. Pour l'OQLF le terme « wiki » est un nom commun qui s'accorde au pluriel7.
+
+Le journal The Economist relève que le mot wiki peut être lu comme l'acronyme de « What I Know Is » (littéralement : « ce que je sais est » ou « voici ce que je sais »)8. Le concours de création littéraire et artistique Dis-moi dix mots a sélectionné le mot « wiki » pour son édition de 2014-20159 et en donne une définition.
+
+Fonctionnement technique
+Un wiki fonctionne grâce à un moteur de wiki : c'est un logiciel installé sur le système hôte du site web.
+
+Identification des visiteurs
+Un wiki peut être configuré pour permettre la modification des pages à tous les visiteurs, ou aux seuls visiteurs inscrits. Dans le cas des wikis qui sont complètement ouverts au public, diverses procédures techniques et sociales sont mises en œuvre pour limiter et annuler les modifications indésirables.
+
+Lorsqu'un wiki autorise des visiteurs anonymes à modifier les pages, c'est l'adresse IP de ces derniers qui les identifie ; les utilisateurs inscrits peuvent quant à eux se connecter sous leur nom d'utilisateur.
+
+Modification des pages
+On accède à un wiki, en lecture comme en écriture, avec un navigateur web classique. On peut visualiser les pages dans deux modes différents : le mode lecture, qui est le mode par défaut, et le mode écriture, qui présente la page sous une forme qui permet de la modifier. Seules les informations générales de navigation servant de modèle à la structure de la page ne sont pas modifiables. En mode écriture, le texte de la page, affiché dans un formulaire web, s'enrichit d'un certain nombre de caractères supplémentaires, suivant les règles d'une syntaxe informatique particulière : le wikitexte, qui permet d'indiquer la mise en forme du texte, de créer des liens, de disposer des images, etc. Le wikitexte a été conçu pour que les fonctionnalités les plus courantes soient faciles à assimiler et saisir10.
+
+Quelques wikis proposent, au lieu du wikitexte, une interface d'édition WYSIWYG, par exemple Confluence et XWiki, ainsi que Wikipédia depuis juillet 2013.
+
+Liens et création de pages
+Les wikis favorisent la création d'hyperliens en simplifiant l'écriture et en n'imposant aucune contrainte organisationnelle. Ainsi, chaque page web contient de nombreux liens qui la relient à d'autres pages, sans structure hiérarchique apparente. Il existe des fonctionnalités pour classer, ou plus précisément retrouver les pages, mais elles ne sont pas indispensables. Le wiki devient donc un foisonnement de pages mises au même niveau et reliées les unes aux autres, selon la logique propre au contenu de chacune d'entre elles.
+
+Originellement, les wikis utilisaient des MotsWiki (comme « CompteUtilisateur ») pour générer automatiquement des liens vers d'autres pages. Certains wikis ont des règles syntaxiques distinctes pour la création de liens, à l'exemple de MediaWiki où l'utilisateur emploie les crochets.
+
+L'apparence des liens (par exemple leur couleur) varie selon qu'ils mènent à une page existante ou à une page encore inexistante, que l'utilisateur a, toutefois, la possibilité de créer.
+
+Suivi des modifications
+Certains wikis permettent à un contributeur enregistré de suivre l'évolution d'une page, ou les contributions d'une personne en particulier, ou toutes les créations de page par exemple. Ces suivis aident à détecter les modifications indésirables comme le vandalisme et le spam.
+
+Historique
+L'écriture collaborative des pages rend très utile l'existence d'un historique des modifications. L'historique indique généralement la date de la modification, l'auteur, et la teneur (diff) de chaque modification. À partir de là, il est notamment possible de revenir à une version antérieure pour annuler une modification indésirable. L'historique permet d'attribuer chaque contribution au texte final, ce qui est notamment utile pour enquêter sur les actes malveillants (calomnie, violation de secret, etc.). L'historique fournit enfin, implicitement, la liste des auteurs de chaque page.
+
+Aspects sociaux
+Histoire de la wikisphère
+Ayant évolué à partir des modèles d'origine, tel que le Portland Pattern Repository, les wikis ont connu tout d'abord une phase d'exploration logicielle jusque vers 1999. De 2000 à 2005, il y a une succession de tentatives dans la « Terrewiki francophone », ou wikisphère11, qui apportent chacune leur lot d'innovations. Le serveur Crao Wiki apparaît en 2003, et s'attribue la tâche de répertorier les usages en cours sur les wikis, et de définir des normes. Cette activité se poursuivra essentiellement jusqu'en 2007, avec les deux autres « wikis sur le wiki » : MeatBall Wiki (en) et Community Wiki. Ce travail hybride d'observation et de définition de normes donnera notamment lieu à des examens historiques de l'histoire de la wikisphère francophone, ou encore à une polémique sur la valeur sociale de l'outil wiki et ce que l'on peut en attendre, un des intervenants majeurs de l'époque ayant établi dix points12 par lesquels l'outil wiki échoue à atteindre son but, critique qui reste à maints égards pertinente depuis lors. Une thèse d'Emmanuel Ruzé reprend ces considérations et d'autres appliquées à la communauté des utilisateurs WordPress (c'est le titre du travail)13. À partir de 2007, la nécessité de définir des normes wiki semble devenir moins pertinente du fait d'une relative standardisation des pratiques. Les wikis semblent plus éparpillés dans leur zoologie surtout depuis que les modes d'édition collaborative ont évolué entre-temps.
+
+Fonctionnement humain
+Lorsqu'une page est modifiée, les contributeurs réguliers qui suivent les évolutions de cette page peuvent vérifier et, si besoin, corriger ou compléter la modification effectuée. Ainsi, les actes de vandalisme, le spam et les divers détournements peuvent être rapidement détectés et annulés.
+
+Le logiciel dispose de diverses fonctions et d'un système de gestion des droits d'utilisation de ces fonctions. Ainsi, les utilisateurs d'un site web écrit avec un wiki peuvent être répartis en différentes familles ayant chacune accès à tout ou partie des fonctions du logiciel.

@@ -94,6 +94,7 @@ int main(int argc, char* argv[])
 	pthread_mutex_init(&mutexGrilleJeu,NULL);
 	pthread_mutex_init(&mutexEvenement,NULL);
 	pthread_mutex_init(&mutexDK,NULL);
+	pthread_mutex_init(&mutexScore,NULL);
 
 
 	ouvrirFenetreGraphique();
@@ -109,6 +110,7 @@ int main(int argc, char* argv[])
 	pthread_create(&threadCle,NULL,(void*(*)(void*))FctThreadCle,NULL);
 	pthread_create(&threadEvenements,NULL,(void*(*)(void*))FctThreadEvenements,NULL);
 	pthread_create(&threadDK,NULL,(void*(*)(void*))FctThreadDK,NULL);
+	pthread_create(&threadScore,NULL,(void*(*)(void*))FctThreadScore,NULL);
 
 	sigset_t mask;
 	sigemptyset(&mask);
@@ -217,7 +219,9 @@ void* FctThreadCle(void*p)
 		}
 
 		nanosleep(&temps,NULL);
+		pthread_mutex_lock(&mutexGrilleJeu);
 		effacerCarres(3,12,2,3);
+		pthread_mutex_unlock(&mutexGrilleJeu);
 		
 	}
 	pthread_exit(0);
@@ -484,17 +488,30 @@ void* FctThreadDKJr(void*p)
 						nanosleep(&temps2,NULL);
 						effacerCarres(5,12,3,2);
 
-						effacerCarres(3,12,2,4);
+						
 
 						afficherDKJr(3,11,10);
-
 						nanosleep(&temps2,NULL);
 						effacerCarres(3,11,3,2);
 						afficherCage(4);
 
+						pthread_mutex_lock(&mutexDK);
 						MAJDK = true;
+						pthread_mutex_unlock(&mutexDK);
 
 						pthread_cond_signal(&condDK);
+
+						pthread_mutex_lock(&mutexScore);
+						MAJScore = true;
+						score += 10;
+						pthread_mutex_unlock(&mutexScore);
+						pthread_cond_signal(&condScore);
+
+						afficherDKJr(3,12,11);
+						nanosleep(&temps2,NULL);
+						effacerCarres(6,10,2,3);
+
+						
 
 						positionDKJr = 1;
 
@@ -509,22 +526,16 @@ void* FctThreadDKJr(void*p)
 					etatDKJr = LIBRE_BAS;
 
 					afficherDKJr(14,9,9);
-					pthread_mutex_unlock(&mutexGrilleJeu);
 					nanosleep(&temps2,NULL);
-					pthread_mutex_lock(&mutexGrilleJeu);
 					effacerCarres(5,12,3,2);
 					
 
 					afficherDKJr(6,11,12);
-					pthread_mutex_unlock(&mutexGrilleJeu);
 					nanosleep(&temps2,NULL);
-					pthread_mutex_lock(&mutexGrilleJeu);
 					effacerCarres(6,11,2,2);
 
 					afficherDKJr(14,9,13);
-					pthread_mutex_unlock(&mutexGrilleJeu);
 					nanosleep(&temps2,NULL);
-					pthread_mutex_lock(&mutexGrilleJeu);
 
 					positionDKJr = 0;
 					setGrilleJeu(3,positionDKJr,DKJR);
@@ -674,7 +685,14 @@ void* FctThreadDK(void*p)
 				case 4:
 					effacerCarres(4,9,2,3);
 					afficherRireDK();
+					pthread_mutex_lock(&mutexScore);
+					MAJScore = true;
+					score += 10;
+					pthread_mutex_unlock(&mutexScore);
+					pthread_cond_signal(&condScore);
+					pthread_mutex_lock(&mutexGrilleJeu);
 					nanosleep(&temps,NULL);
+					pthread_mutex_unlock(&mutexGrilleJeu);
 					effacerCarres(3,8,2,2);
 					i=1;
 
@@ -682,11 +700,37 @@ void* FctThreadDK(void*p)
 					afficherCage(2);
 					afficherCage(3);
 					afficherCage(4);
-
 			}
+			MAJDK = false;
 		}
-		MAJDK == false;
 	}
+}
+
+
+void* FctThreadScore(void*p)
+{
+	sigset_t mask;
+	sigemptyset(&mask);
+	sigaddset(&mask,SIGQUIT);
+	sigprocmask(SIG_SETMASK,&mask,NULL);
+
+
+	afficherScore(score);
+
+
+	while(1)
+	{
+		pthread_cond_wait(&condScore,&mutexScore);
+
+
+		if (MAJScore == true)
+		{
+			afficherScore(score);
+
+			MAJScore = false;
+		}
+	}
+
 }
 
 
